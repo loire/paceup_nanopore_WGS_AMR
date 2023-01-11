@@ -18,6 +18,7 @@ from raw fastq:
 * Phylogenomic tree with FastTree
 
 ## Usage
+`snakemake -s Nanopore_bacterial_WGS_Assembly.snakefile -r --cores 1`
 
 ## Credits
 
