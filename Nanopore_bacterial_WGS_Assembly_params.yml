@@ -1,0 +1,34 @@
+##### Parameters to set for WGS assembly from nanopore data
+#
+# Input files are fastq (after guppy treatment)
+# Place all fastq in a directory:
+#
+datadir: "/home/paceup/work/Nhat_NIVR_project/DATA_2022_WGS_NHAT_CRE_CoRE_HUMAN-PIGS_samples/All_data"
+### Precise extension for fastq files:
+#
+ext: ".fastq"
+# precise a path for output:
+#
+outputdir: "/home/paceup/work/Nhat_NIVR_project/12_12_analysis"
+### Reads filtering parameters
+minReadsLength: 1000
+BestQualReadsPercentKeep: 90
+# Number of threads to use for assembly
+#
+threadsFlye: 15
+### Number of threads to use for polishing (CPU for now, need to test GPU)
+threadsMedaka : 4
+### Number of batch to use in medaka (to lower if memory issue)
+batchMedaka : 100 
+### MedakaModel (depend on Nanopore device and Guppy version)
+medakamodel: "r941_min_hac_g507"
+#### Choose a lineage for busco analysis
+#### To see list of lineages: busco --list-datasets
+### For E coli . choose: "enterobacterales_odb10" 
+buscoLineage: "enterobacterales_odb10"
+###### Number of threads for mob
+threadsMob: 18
+###### threads for roary
+threadsRoary: 10
+
+
